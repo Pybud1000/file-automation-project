@@ -1,10 +1,10 @@
 extension;folder name
-csv;CSV
-xlsx;Excel
-xls;Excel
-txt;Text File
-png;Images
-jpg;Images
-jpeg;Images
-mp4;Videos
-mp3;Audio
+.csv;CSV
+.xlsx;Excel
+.xls;Excel
+.txt;Text File
+.png;Images
+.jpg;Images
+.jpeg;Images
+.mp4;Videos
+.mp3;Audio

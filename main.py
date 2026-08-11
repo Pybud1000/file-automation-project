@@ -23,16 +23,17 @@ keywords = load_matrix()
 
 for file in dir_path.iterdir():
 
-    entry = str(file) 
-    ext = entry.split(".") 
-
+    ext = file
     folder_name = "" 
 
-    if ext[-1] in keywords:
-        folder_name = keywords[ext[-1]]
+    if ext.suffix.lower() in keywords: # Bug-fix 2: Word case issue
+        folder_name = keywords[ext.suffix.lower()]
+    else:
+        folder_name = "Unkown" # Bug-fix 1: if the file extension does not exist in the matrix or is unrecognizable
 
     folder_path = output_path/folder_name
     folder_path.mkdir(parents=True, exist_ok=True)
+
     shutil.copy2(file, folder_path)
 
 
